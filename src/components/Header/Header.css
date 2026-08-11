@@ -1,0 +1,54 @@
+/* 🎩 Header general */
+.header {
+  position: fixed;           /* El header queda fijo en la pantalla (no se mueve al hacer scroll) */
+  top: 0;                    /* Lo coloca pegado arriba */
+  left: 50%;                 /* Lo posiciona a la mitad horizontal de la pantalla */
+  transform: translateX(-50%); /* Lo ajusta hacia la izquierda para centrarlo exactamente */
+  width: 100%;               /* Hace que ocupe todo el ancho de la pantalla */
+  height: 60px;              /* Altura del header */
+  background-color: #282c34; /* Color de fondo oscuro */
+  display: flex;             /* Activa flexbox para alinear su contenido */
+  align-items: center;       /* Alinea verticalmente al centro */
+  justify-content: center;   /* Alinea horizontalmente al centro */
+  color: white;              /* Texto en color blanco */
+  padding: 0 20px;           /* Espaciado interno a izquierda y derecha */
+  z-index: 1000;             /* Lo coloca por encima de otros elementos */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* sombra debajo del header */
+  backdrop-filter: blur(8px);             /* desenfoque tipo vidrio esmerilado (si usas color semi-transparente) */
+  border-bottom: 2px solid #61dafb;       /* línea en la parte inferior */
+  opacity: 0.95;                          /* lo haces un poquito transparente */
+}
+
+/* 🔗 Links */
+.header nav a {
+  margin: 0 10px;            /* Espacio horizontal entre enlaces */
+  color: #61dafb;            /* Color azul React para los enlaces */
+  text-decoration: none;     /* Quita el subrayado */
+  font-weight: bold;         /* texto en negrita */
+  letter-spacing: 1px;       /* espacio entre letras */
+  text-transform: uppercase; /* convierte texto a MAYÚSCULAS */
+  transition: color 0.3s;    /* transición suave en cambios de color */
+  display: inline-block;    /* el texto se comporta como un mini "bloque", lo que permite aplicar transform*/
+}
+
+.header nav a:hover {
+  text-decoration: underline; /* Al pasar el mouse, subraya el enlace */
+  color: rgb(255, 255, 255);              /* cambia color al pasar mouse */
+  transform: scale(1.2);     /* los agranda un poquito */
+}
+
+/* Logo Sobre mi*/
+.logos {
+  width: 55px;                /* Ancho de la imagen */
+  height: auto;               /* Ajusta la altura automáticamente, mantiene proporción */
+  border-radius: 8px;         /* Bordes redondeados */
+  transition: transform 0.3s ease; /* Animación suave al transformar (ej. zoom) */
+  filter: drop-shadow(0 0 5px #61dafb); /* sombra luminosa */
+  /*cursor: pointer;                       cambia el cursor a "manita" */
+  /*rotate: 5deg;                          inclinación */
+  vertical-align: middle; /* 👈 lo centra con el texto */
+}
+
+.logos:hover {
+  transform: scale(0.8); /* animación de zoom */
+}
