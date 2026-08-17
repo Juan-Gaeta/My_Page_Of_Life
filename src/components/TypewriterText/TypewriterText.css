@@ -1,0 +1,26 @@
+.typewriter {
+  min-height: 1.2em;
+  margin: 0;
+  color: #f7f7f2;
+  font-size: clamp(3rem, 12vw, 7rem);
+  line-height: 1;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 0.08em;
+  color: #7dd3fc;
+  animation: blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
