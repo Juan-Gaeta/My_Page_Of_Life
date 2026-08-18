@@ -1,0 +1,27 @@
+.page-section {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 96px 32px;
+}
+
+.page-section-header {
+  max-width: 680px;
+  margin-bottom: 32px;
+}
+
+.page-section-header h2 {
+  margin: 0;
+  color: #f7f7f2;
+  font-size: 2.4rem;
+}
+
+.page-section-header p {
+  margin: 12px 0 0;
+  color: #d9d9d6;
+  font-size: 1.1rem;
+}
+
+.page-section-content {
+  color: #f7f7f2;
+  font-size: 1rem;
+}

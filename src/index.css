@@ -12,6 +12,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -33,10 +38,14 @@ body {
 
 .home {
   min-height: 100vh;
+  background: linear-gradient(135deg, #141414 0%, #222222 48%, #101010 100%);
+}
+
+.hero-section {
+  min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 32px;
-  background: linear-gradient(135deg, #141414 0%, #222222 48%, #101010 100%);
+  padding: 20px 32px 72px;
 }
 
 .hero-layout {
@@ -92,8 +101,12 @@ button:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .home {
-    padding: 24px;
+  html {
+    scroll-padding-top: 150px;
+  }
+
+  .hero-section {
+    padding: 160px 24px 56px;
   }
 
   .hero-layout {
