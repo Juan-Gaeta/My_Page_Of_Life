@@ -1,0 +1,55 @@
+.game-card {
+  overflow: hidden;
+  border: 1px solid rgba(247, 247, 242, 0.12);
+  border-radius: 8px;
+  background: rgba(247, 247, 242, 0.055);
+}
+
+.game-card-image {
+  height: 190px;
+  display: grid;
+  place-items: center;
+  background: #bbb2d0;
+}
+
+.game-card-image img {
+  width: 145px;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+}
+
+.game-card-body {
+  padding: 22px;
+}
+
+.game-card-kicker {
+  margin: 0 0 12px;
+  color: #7dd3fc;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.game-card h3 {
+  margin: 0;
+  color: #f7f7f2;
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.game-card-body > p:not(.game-card-kicker) {
+  margin: 14px 0 20px;
+  color: #c9c9c5;
+}
+
+.game-card a {
+  color: #f7f7f2;
+  font-weight: 800;
+}
+
+.game-card a span {
+  color: #7dd3fc;
+}

@@ -76,6 +76,22 @@ body {
   font-size: 1.15rem;
 }
 
+.game-ideas {
+  padding-bottom: 32px;
+}
+
+.game-ideas-intro {
+  max-width: 650px;
+  margin: 0 0 28px;
+  color: #bcbcb8;
+}
+
+.game-ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -112,5 +128,11 @@ button:focus-visible {
   .hero-layout {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+}
+
+@media (max-width: 720px) {
+  .game-ideas-grid {
+    grid-template-columns: 1fr;
   }
 }

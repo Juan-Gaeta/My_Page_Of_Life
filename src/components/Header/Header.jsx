@@ -1,23 +1,24 @@
 import './Header.css'
+import { NavLink } from 'react-router-dom'
 
 const navItems = [
-  { href: '#inicio', label: 'Inicio' },
-  { href: '#sobre-mi', label: 'Sobre mi' },
-  { href: '#videojuegos', label: 'Videojuegos' },
+  { to: '/', label: 'Inicio' },
+  { to: '/sobre-mi', label: 'Sobre mi' },
+  { to: '/videojuegos', label: 'Videojuegos' },
 ]
 
 function Header() {
   return (
     <header className="site-header">
-      <a className="site-brand" href="#inicio" aria-label="Ir al inicio">
+      <NavLink className="site-brand" to="/" aria-label="Ir al inicio">
         S
-      </a>
+      </NavLink>
 
       <nav className="site-nav" aria-label="Navegacion principal">
         {navItems.map((item) => (
-          <a key={item.href} href={item.href}>
+          <NavLink key={item.to} to={item.to}>
             {item.label}
-          </a>
+          </NavLink>
         ))}
       </nav>
     </header>

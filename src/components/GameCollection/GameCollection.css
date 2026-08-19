@@ -1,0 +1,116 @@
+.game-collection {
+  grid-column: 1 / -1;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(247, 247, 242, 0.12);
+  border-radius: 8px;
+  background: rgba(247, 247, 242, 0.055);
+}
+
+.game-collection-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.game-collection-kicker {
+  margin: 0 0 12px;
+  color: #7dd3fc;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.game-collection h3 {
+  margin: 0;
+  color: #f7f7f2;
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.game-collection-count {
+  color: #a6e3b3;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.game-list {
+  display: grid;
+  gap: 8px;
+}
+
+.game-list-item {
+  display: grid;
+  grid-template-columns: 32px 44px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 68px;
+  padding: 8px 12px;
+  border-left: 3px solid #bbb2d0;
+  background: rgba(247, 247, 242, 0.05);
+}
+
+.game-list-item--mint { border-color: #a6e3b3; }
+.game-list-item--peach { border-color: #f3b18d; }
+
+.game-list-number {
+  color: #858580;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.game-list-icon {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #bbb2d0;
+}
+
+.game-list-item--mint .game-list-icon { background: #a6e3b3; }
+.game-list-item--peach .game-list-icon { background: #f3b18d; }
+
+.game-list-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.game-list-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.game-list-copy strong { color: #f7f7f2; }
+.game-list-copy small { color: #a8a8a4; }
+.game-list-arrow { color: #7dd3fc; font-size: 1.2rem; }
+
+@media (max-width: 720px) {
+  .game-collection {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .game-collection-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .game-list-item {
+    grid-template-columns: 24px 38px 1fr auto;
+    gap: 8px;
+    padding-inline: 8px;
+  }
+
+  .game-list-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
