@@ -2,7 +2,7 @@ import PageSection from '../components/PageSection/PageSection'
 import GameCard from '../components/GameCard/GameCard'
 import FeaturedGame from '../components/FeaturedGame/FeaturedGame'
 import GameCollection from '../components/GameCollection/GameCollection'
-import { games, bloodborneFeatured, bloodborneCard } from '../data/games/gamesData'
+import { games, bloodborneFeatured, highOnLifeCard, minecraftFeatured } from '../data/games/gamesData'
 
 function GamesPage() {
   return (
@@ -20,11 +20,15 @@ function GamesPage() {
 
           <div className="game-ideas-grid">
             <GameCard
-              {...bloodborneCard}
+              {...highOnLifeCard}
             />
 
             <FeaturedGame
               {...bloodborneFeatured}
+            />
+
+            <FeaturedGame
+              {...minecraftFeatured}
             />
 
             <GameCollection games={games} />

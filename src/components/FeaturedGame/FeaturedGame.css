@@ -8,10 +8,18 @@
   background: #305c62;
 }
 
+.featured-game::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(10, 16, 18, 0.92), rgba(10, 16, 18, 0.28));
+  content: '';
+}
+
 .featured-game-copy {
   position: relative;
-  z-index: 1;
-  width: 62%;
+  z-index: 2;
+  width: min(62%, 360px);
   padding: 22px;
 }
 
@@ -40,15 +48,13 @@
 
 .featured-game > img {
   position: absolute;
-  right: -38px;
-  bottom: -28px;
-  width: 235px;
-  height: 235px;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  transform: rotate(10deg);
-  mix-blend-mode: screen;
-  opacity: 0.85;
+  object-position: center;
+  opacity: 0.9;
 }
 
 .featured-game-meta {
@@ -63,4 +69,15 @@
 .featured-game-meta strong {
   color: #f7f7f2;
   font-size: 1rem;
+}
+
+.featured-game-link {
+  display: inline-block;
+  margin-top: 28px;
+  color: #f7f7f2;
+  font-weight: 800;
+}
+
+.featured-game-link span {
+  color: #7dd3fc;
 }

@@ -7,17 +7,17 @@
 
 .game-card-image {
   height: 190px;
+  overflow: hidden;
   display: grid;
   place-items: center;
   background: #bbb2d0;
 }
 
 .game-card-image img {
-  width: 145px;
-  height: 145px;
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: cover;
-  border-radius: 50%;
-  mix-blend-mode: multiply;
 }
 
 .game-card-body {

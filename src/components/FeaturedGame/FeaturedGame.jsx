@@ -1,6 +1,6 @@
 import './FeaturedGame.css'
 
-function FeaturedGame({ image, imageAlt, title, description, genre }) {
+function FeaturedGame({ image, imageAlt, title, description, genre, href }) {
   return (
     <article className="featured-game">
       <div className="featured-game-copy">
@@ -11,6 +11,9 @@ function FeaturedGame({ image, imageAlt, title, description, genre }) {
           <span>Genero</span>
           <strong>{genre}</strong>
         </div>
+        <a className="featured-game-link" href={href}>
+          Ver detalle <span aria-hidden="true">↗</span>
+        </a>
       </div>
       <img src={image} alt={imageAlt} />
     </article>
