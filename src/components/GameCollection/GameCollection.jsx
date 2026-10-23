@@ -1,4 +1,5 @@
 import './GameCollection.css'
+import GameDetailLink from '../GameDetailLink/GameDetailLink'
 
 function GameCollection({ games }) {
   return (
@@ -12,7 +13,13 @@ function GameCollection({ games }) {
       </div>
       <div className="game-list">
         {games.map((game, index) => (
-          <div className={`game-list-item game-list-item--${game.accent}`} key={game.title}>
+          <GameDetailLink
+            className={`game-list-item game-list-item--${game.accent}`}
+            key={game.slug}
+            slug={game.slug}
+            source="collection"
+            label={`Ver detalle de ${game.title}`}
+          >
             <span className="game-list-number">0{index + 1}</span>
             <span className="game-list-icon"><img src={game.image} alt={game.imageAlt} /></span>
             <span className="game-list-copy">
@@ -20,7 +27,7 @@ function GameCollection({ games }) {
               <small>{game.detail}</small>
             </span>
             <span className="game-list-arrow" aria-hidden="true">→</span>
-          </div>
+          </GameDetailLink>
         ))}
       </div>
     </article>

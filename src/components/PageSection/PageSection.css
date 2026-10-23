@@ -1,7 +1,7 @@
 .page-section {
-  width: min(1100px, 100%);
+  width: 100%;
   margin: 0 auto;
-  padding: 96px 32px;
+  padding: var(--page-top) var(--page-gutter) 64px;
 }
 
 .page-section-header {

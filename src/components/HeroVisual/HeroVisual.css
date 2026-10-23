@@ -3,14 +3,15 @@
   justify-items: center;
   gap: 14px;
   margin: 0;
+  min-width: 0;
 }
 
 .hero-visual-frame {
-  width: min(330px, 72vw);
+  width: min(100%, clamp(260px, 34vw, 640px));
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  padding: 28px;
+  padding: clamp(16px, 2.5vw, 40px);
   overflow: hidden;
   border: 1px solid rgba(247, 247, 242, 0.18);
   border-radius: 8px;

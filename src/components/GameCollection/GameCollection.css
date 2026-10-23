@@ -1,5 +1,6 @@
 .game-collection {
-  grid-column: 1 / -1;
+  min-width: 0;
+  margin-top: 24px;
   padding: 22px;
   overflow: hidden;
   border: 1px solid rgba(247, 247, 242, 0.12);
@@ -40,19 +41,27 @@
 
 .game-list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   gap: 8px;
 }
 
 .game-list-item {
   display: grid;
-  grid-template-columns: 32px 44px 1fr auto;
+  grid-template-columns: 32px 44px minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
+  min-width: 0;
   min-height: 68px;
   padding: 8px 12px;
   border-left: 3px solid #bbb2d0;
   background: rgba(247, 247, 242, 0.05);
+  border-radius: 4px;
+  transition: background-color 0.2s;
 }
+
+.game-list-item:hover { background: rgba(125, 211, 252, 0.1); }
+.game-list-item:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 3px; }
+.game-list-copy { min-width: 0; overflow-wrap: anywhere; }
 
 .game-list-item--mint { border-color: #a6e3b3; }
 .game-list-item--peach { border-color: #f3b18d; }
@@ -91,12 +100,6 @@
 .game-list-copy small { color: #a8a8a4; }
 .game-list-arrow { color: #7dd3fc; font-size: 1.2rem; }
 
-@media (max-width: 720px) {
-  .game-collection {
-    grid-column: auto;
-  }
-}
-
 @media (max-width: 420px) {
   .game-collection-heading {
     align-items: start;
@@ -104,7 +107,7 @@
   }
 
   .game-list-item {
-    grid-template-columns: 24px 38px 1fr auto;
+    grid-template-columns: 24px 38px minmax(0, 1fr) auto;
     gap: 8px;
     padding-inline: 8px;
   }

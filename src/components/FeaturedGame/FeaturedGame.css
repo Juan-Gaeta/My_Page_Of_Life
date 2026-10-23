@@ -1,6 +1,7 @@
 .featured-game {
   position: relative;
   display: flex;
+  min-width: 0;
   min-height: 330px;
   overflow: hidden;
   border: 1px solid rgba(247, 247, 242, 0.12);
@@ -19,7 +20,10 @@
 .featured-game-copy {
   position: relative;
   z-index: 2;
-  width: min(62%, 360px);
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 380px);
+  min-width: 0;
   padding: 22px;
 }
 
@@ -38,6 +42,7 @@
   color: #f7f7f2;
   font-size: 2rem;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .featured-game-copy > p:not(.featured-game-kicker) {
@@ -72,8 +77,10 @@
 }
 
 .featured-game-link {
+  align-self: flex-start;
   display: inline-block;
-  margin-top: 28px;
+  margin-top: auto;
+  padding-top: 28px;
   color: #f7f7f2;
   font-weight: 800;
 }

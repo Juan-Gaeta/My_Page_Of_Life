@@ -1,4 +1,7 @@
 .game-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   overflow: hidden;
   border: 1px solid rgba(247, 247, 242, 0.12);
   border-radius: 8px;
@@ -6,7 +9,9 @@
 }
 
 .game-card-image {
-  height: 190px;
+  flex-shrink: 0;
+  aspect-ratio: 16 / 9;
+  max-height: 320px;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -21,6 +26,10 @@
 }
 
 .game-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
   padding: 22px;
 }
 
@@ -38,6 +47,7 @@
   color: #f7f7f2;
   font-size: 1.45rem;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .game-card-body > p:not(.game-card-kicker) {
@@ -46,6 +56,8 @@
 }
 
 .game-card a {
+  align-self: flex-start;
+  margin-top: auto;
   color: #f7f7f2;
   font-weight: 800;
 }

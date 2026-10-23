@@ -1,6 +1,7 @@
 import './GameCard.css'
+import GameDetailLink from '../GameDetailLink/GameDetailLink'
 
-function GameCard({ image, imageAlt, title, description, href }) {
+function GameCard({ slug, image, imageAlt, title, description }) {
   return (
     <article className="game-card">
       <div className="game-card-image">
@@ -10,7 +11,9 @@ function GameCard({ image, imageAlt, title, description, href }) {
         <p className="game-card-kicker">Card de juego</p>
         <h3>{title}</h3>
         <p>{description}</p>
-        <a href={href}>Ver detalle <span aria-hidden="true">↗</span></a>
+        <GameDetailLink slug={slug} source="card" label={`Ver detalle de ${title}`}>
+          Ver detalle <span aria-hidden="true">↗</span>
+        </GameDetailLink>
       </div>
     </article>
   )

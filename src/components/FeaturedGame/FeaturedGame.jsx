@@ -1,6 +1,7 @@
 import './FeaturedGame.css'
+import GameDetailLink from '../GameDetailLink/GameDetailLink'
 
-function FeaturedGame({ image, imageAlt, title, description, genre, href }) {
+function FeaturedGame({ slug, image, imageAlt, title, description, genre }) {
   return (
     <article className="featured-game">
       <div className="featured-game-copy">
@@ -11,9 +12,14 @@ function FeaturedGame({ image, imageAlt, title, description, genre, href }) {
           <span>Genero</span>
           <strong>{genre}</strong>
         </div>
-        <a className="featured-game-link" href={href}>
+        <GameDetailLink
+          className="featured-game-link"
+          slug={slug}
+          source="featured"
+          label={`Ver detalle de ${title}`}
+        >
           Ver detalle <span aria-hidden="true">↗</span>
-        </a>
+        </GameDetailLink>
       </div>
       <img src={image} alt={imageAlt} />
     </article>
