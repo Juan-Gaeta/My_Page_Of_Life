@@ -8,7 +8,7 @@ function GameDetailPage() {
   const { slug } = useParams()
   const location = useLocation()
   const mainRef = useRef(null)
-  const game = getGameDetail(slug)
+  const selectedGame = getGameDetail(slug)
   const returnState = {
     restoreScrollY: location.state?.returnScrollY,
     restoreFocusId: location.state?.returnFocusId,
@@ -28,8 +28,8 @@ function GameDetailPage() {
           </Link>
           <span>Mi biblioteca</span>
         </div>
-        {game ? (
-          <GameDetail game={game} titleId="game-page-title" />
+        {selectedGame ? (
+          <GameDetail game={selectedGame} titleId="game-page-title" />
         ) : (
           <section className="game-detail-page-empty">
             <p>Esta historia todavía no está en la colección</p>

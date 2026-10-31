@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import GamesPage from './pages/GamesPage'
 import GameDetailPage from './pages/GameDetailPage'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/videojuegos" element={<GamesPage />} />
         <Route path="/videojuegos/:slug" element={<GameDetailPage />} />
       </Routes>
+      
+      <Footer />
     </BrowserRouter>
   )
 }
