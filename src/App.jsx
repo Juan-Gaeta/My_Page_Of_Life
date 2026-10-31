@@ -17,8 +17,8 @@ function App() {
         <Route path="/videojuegos" element={<GamesPage />} />
         <Route path="/videojuegos/:slug" element={<GameDetailPage />} />
       </Routes>
-      
-      <Footer />
+
+      <Footer author="Sharlos" year={2026}/>
     </BrowserRouter>
   )
 }
